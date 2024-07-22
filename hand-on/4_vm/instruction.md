@@ -11,7 +11,7 @@ Placeholder variable name with `<var_name>`
    ```text
    Subscription: any
    resouce-group: <org>-rg-sbx
-   vm-name: <org>-blue-vm-sbx
+   vm-name: <org>-vm-red-sbx
    image: ubuntu:22.04 LTS - x64 Gen2
    size: Standard_B1s
    arch: x64
