@@ -77,3 +77,9 @@ If you change `/etc/systemd/system/little-micro.service` file, you need to reloa
 ```bash
 sudo systemctl daemon-reload
 ```
+
+6. See log with journalctl
+
+```bash
+sudo journalctl -f -u little-micro.service
+```
