@@ -52,3 +52,15 @@ spec:
     cost-preset: standard
     enable-recommended-alert-rules: true
 ```
+
+2. Get kube context into your PC
+
+```bash
+az aks get-credentials --resource-group myResourceGroup --name myAKSCluster
+```
+
+3. Test with kubectl
+
+```bash
+kubectl get node
+```
