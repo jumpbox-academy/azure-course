@@ -14,7 +14,7 @@ spec:
   kubernetes-version: 1.29.5
   authn-authz: Microsoft entra id auth with azure RBAC
   node-pools:
-    system:
+    agentpool:
       mode: system
       OS-SKU: azure-linux
       az:
@@ -31,7 +31,7 @@ spec:
         - 2
       node-size: D2as
       scale-method: autoscale
-      min-node: 1
+      min-node: 0
       max-node: 3
       max-pod-per-node: 40
   network:
@@ -39,6 +39,11 @@ spec:
     network-config: azure CNI overlay
     dns-name-prefix: <org>-aks-redlab-sbx
     enable-cilium: true
+    bring-your-own-vnet: true
+    vnet: as you prefer
+    subnet: as you prefer
+    kube-service-addr-rangd: 10.16.0.0/16
+    kube-dns-svc-ip: "10.16.0.10"
     load-balance: standard
   integrations: {}
   monitoring:
