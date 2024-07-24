@@ -21,7 +21,6 @@ Prerequisite
 
    ```bash
      sudo mkdir /app
-     sudo chown azureuser:azureuser -R /app
      sudo chmod 755 -R /app
      curl -L https://gitlab.com/puksigon/little-microservice/-/package_files/139559074/download -o /app/little-microservice
 
