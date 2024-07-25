@@ -11,6 +11,6 @@ data:
       port: "80"
 
     serviceA:
-      enabled: false
-      url: "http://little-micro-2/api/ping"
+      enabled: true
+      url: "http://little-micro-1/api/ping"
       interval: "5s"
