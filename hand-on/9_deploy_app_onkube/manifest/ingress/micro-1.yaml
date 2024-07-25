@@ -1,0 +1,20 @@
+# https://kubernetes.io/docs/concepts/services-networking/ingress/#the-ingress-resource
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: micro-1
+  namespace: micro-app
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: micro-1.jumpbox.academy
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: little-micro-1
+                port:
+                  number: 80

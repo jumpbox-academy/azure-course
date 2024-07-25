@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: micro-1
-          image: registry.gitlab.com/puksigon/little-microservice:1.0.0
+          image: registry.gitlab.com/puksigon/little-microservice:1.0.1
           resources:
             requests:
               cpu: 200m
