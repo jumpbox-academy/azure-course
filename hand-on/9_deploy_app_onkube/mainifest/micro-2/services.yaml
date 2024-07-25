@@ -4,7 +4,7 @@ metadata:
   name: little-micro-2
 spec:
   selector:
-    app: little-micro-2
+    app: micro-2
   type: ClusterIP
   ports:
     - name: http
