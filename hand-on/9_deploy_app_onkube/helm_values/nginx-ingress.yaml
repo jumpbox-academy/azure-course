@@ -2,3 +2,6 @@ controller:
   replicaCount: 1
   opentelemetry:
     enabled: true
+  service:
+    annotations:
+      service.beta.kubernetes.io/azure-load-balancer-health-probe-request-path: /healthz

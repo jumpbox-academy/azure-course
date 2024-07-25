@@ -37,6 +37,10 @@ install nginx ingres
 # You muse be in folder "./hand-on/9_deploy_app_onkube/helm_values" first.
 helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
 helm install nginx ingress-nginx/ingress-nginx --version 4.11.1 -n nginx-ingress -f nginx-ingress.yaml
+
+# or
+
+helm upgrade nginx ingress-nginx/ingress-nginx --version 4.11.1 -n nginx-ingress -f nginx-ingress.yaml
 ```
 
 ---
