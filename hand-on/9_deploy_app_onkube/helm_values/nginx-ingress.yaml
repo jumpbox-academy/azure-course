@@ -1,0 +1,4 @@
+controller:
+  replicaCount: 1
+  opentelemetry:
+    enabled: true
