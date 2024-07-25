@@ -5,6 +5,9 @@ metadata:
   namespace: micro-app
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: micro-2
   template:
     metadata:
       labels:
@@ -15,5 +18,13 @@ spec:
           image: registry.gitlab.com/puksigon/little-microservice:1.0.0
           resources:
             requests:
-              cpu: 0.2
-              mem: 512
+              cpu: 200m
+              memory: 512Mi
+          volumeMounts:
+            - name: micro-2-cm
+              mountPath: /app/config.yaml
+              subPath: config.yaml
+      volumes:
+        - name: micro-2-cm
+          configMap:
+            name: micro-2
