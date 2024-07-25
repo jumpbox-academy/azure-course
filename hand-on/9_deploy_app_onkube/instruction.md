@@ -38,3 +38,15 @@ install nginx ingres
 helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
 helm install nginx ingress-nginx/ingress-nginx --version 4.11.1 -n nginx-ingress -f nginx-ingress.yaml
 ```
+
+---
+
+## Network test pod
+
+You can directly create pod and remote into it for network inspection inside the cluster.
+
+```bash
+kubectl run -it --image ubuntu:22.04 test-net -- bash
+apt update && apt install curl -y
+curl https://ifconfig.me # check your ip
+```
