@@ -2,6 +2,7 @@ kind: ConfigMap
 apiVersion: v1
 metadata:
   name: micro-1
+  namespace: micro-app
 data:
   config.yaml: |
     service:

@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: micro-1
+  namespace: micro-app
 spec:
   replicas: 1
   template:
