@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: micro-1
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: micro-1
+    spec:
+      containers:
+        - name: micro-1
+          image: registry.gitlab.com/puksigon/little-microservice:1.0.0
+          resources:
+            requests:
+              cpu: 0.2
+              mem: 512
